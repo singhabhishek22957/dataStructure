@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Attribute Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 2000px; /* Extend height for scrolling */
+        }
+
+        .static {
+            background-color: lightblue;
+            padding: 20px;
+            position: static; /* Default position */
+            border: 1px solid blue;
+        }
+
+        .relative {
+            background-color: lightgreen;
+            padding: 20px;
+            position: relative; /* Relative to its normal position */
+            border: 1px solid green;
+            top: 20px; /* Moves down 20px */
+            left: 20px; /* Moves right 20px */
+        }
+
+        .absolute {
+            background-color: lightcoral;
+            padding: 20px;
+            position: absolute; /* Positioned relative to the nearest positioned ancestor */
+            border: 1px solid red;
+            top: 100px; /* 100px from the top of the nearest positioned ancestor */
+            right: 20px; /* 20px from the right */
+        }
+
+        .fixed {
+            background-color: lightgoldenrodyellow;
+            padding: 20px;
+            position: fixed; /* Positioned relative to the viewport */
+            border: 1px solid orange;
+            bottom: 20px; /* 20px from the bottom of the viewport */
+            left: 20px; /* 20px from the left */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="static">
+        <h2>Static Position</h2>
+        <p>This element is positioned statically. This is the default positioning method in CSS.</p>
+    </div>
+
+    <div class="relative">
+        <h2>Relative Position</h2>
+        <p>This element is positioned relative to its normal position. It is moved down and to the right.</p>
+    </div>
+
+    <div class="absolute">
+        <h2>Absolute Position</h2>
+        <p>This element is positioned absolutely relative to its nearest positioned ancestor (if any), or the initial containing block if none exists.</p>
+    </div>
+
+    <div class="fixed">
+        <h2>Fixed Position</h2>
+        <p>This element is positioned relative to the viewport and will stay in the same position when you scroll.</p>
+    </div>
+
+</body>
+</html>
